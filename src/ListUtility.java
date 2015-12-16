@@ -16,7 +16,7 @@ public class ListUtility {
         return (ArrayList)foundItems.clone();
     }
 
-    public static <T> T findMiddleValue(Collection<T> elems, SearchMiddleValue<T> smv) {
+    public static <T> T findMiddleValue(Collection<? extends T> elems, SearchMiddleValue<? super T> smv) {
         if (elems == null) {
             return null;
         }
